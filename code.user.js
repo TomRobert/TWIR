@@ -8580,8 +8580,8 @@
                             .on("input paste", TWIR.Util.delay(function(i)
                             {
                                 $(this)
-                                    .val() > 150 ? $(this)
-                                    .val(150) : $(this)
+                                    .val() > 250 ? $(this)
+                                    .val(250) : $(this)
                                     .val() < 1 && $(this)
                                     .val(1), t.options[e + "_level"] = parseInt($(this)
                                         .val()), t.handleLevel(e)
@@ -8897,8 +8897,8 @@
                             .on("input paste", TWIR.Util.delay(function(t)
                             {
                                 $(this)
-                                    .val() > 150 ? $(this)
-                                    .val(150) : $(this)
+                                    .val() > 250 ? $(this)
+                                    .val(250) : $(this)
                                     .val() < 1 && $(this)
                                     .val(1), e.options.level = parseInt($(this)
                                         .val())
