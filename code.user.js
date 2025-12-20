@@ -17,7 +17,7 @@
 // @description:tr The-west için daha iyi envanter ve araçlar!
 
 // @author Tom Robert, TauraScript, Jamza
-// @version 2.205
+// @version 2.205.1
 // @license GPL-3.0 http://www.gnu.org/licenses/gpl-3.0.txt
 
 // @include https://*.the-west.*/game.php*
@@ -55,7 +55,7 @@
             .addButton("OK")
             .show() : (window.TWIR_lang = {}, window.TWIR = {
                 name: "TW Inventory Reloaded",
-                version: "2.205",
+                version: "2.205.1",
                 author: "Tom Robert, TauraScript, Jamza",
                 minGame: "2.05",
                 maxGame: Game.version.toString(),
@@ -3946,7 +3946,7 @@
                                 if (t = t.replace(/(<div\s+class\="inventory_popup_icon")(>)/, "$1 " + (TWIR.Util.isJokeTime() && void 0 !== this.options.twir_joke_rotate ? 'style="transform: rotate(' + this.options.twir_joke_rotate + 'deg);"' : "") + "$2" + (TWIR.Features.get("pop_owned_counts") ? '<div class="item"><span class="count" style="display:block;top:74px;left:3px">' + (Bag.getItemCount(this.item_obj.item_id) + n) + "</span></div>" : "")), TWIR.Features.get("pop_item_id") && (t = t.replace(/\<div\>\<img src\="(.*?)\/images\/fort\/battle\/divider\.png" alt\=""\>\<\/div\>/, '<div class="twir_id" style="margin-top: 2px;color: blue;text-align: center;font-size: 12px;">[item=<b>' + this.item_obj.item_id + '</b>]</div> <div style="text-align: center;"><img src="/images/fort/battle/divider.png" ></div>')), TWIR.Features.get("pop_display_event"))
                                 {
                                     var o = TWIR.setsCache[this.item_obj.set];
-                                    o && (t = t.replace(/(<p\s+class="inventory_popup_type">)([\S\s]*?<\/p>)/gi, '<div style="text-align: center; color: #804000;font-weight: bold;"><img src="' + TWIR.images.game_event[o[0]] + '" height="16" width="auto"></img><span style="margin-right: 10px;position: relative;font-size: 11px;font-style: italic;vertical-align: middle;">' + (Array.isArray(TWIR_lang.events[o[0]]) ? TWIR_lang.events[o[0]][0] : TWIR_lang.events[o[0]]) + "&nbsp;" + o[1] + '</span></div> <p class="inventory_popup_type" style="max-width: 250px!important;margin-left: auto;margin-right: auto;margin-top: 5px;"> $2'))
+                                    o && o[0] && (t = t.replace(/(<p\s+class="inventory_popup_type">)([\S\s]*?<\/p>)/gi, '<div style="text-align: center; color: #804000;font-weight: bold;"><img src="' + TWIR.images.game_event[o[0]] + '" height="16" width="auto"></img><span style="margin-right: 10px;position: relative;font-size: 11px;font-style: italic;vertical-align: middle;">' + (Array.isArray(TWIR_lang.events[o[0]]) ? TWIR_lang.events[o[0]][0] : TWIR_lang.events[o[0]]) + "&nbsp;" + (o[1] || '')+ '</span></div> <p class="inventory_popup_type" style="max-width: 250px!important;margin-left: auto;margin-right: auto;margin-top: 5px;"> $2'))
                                 }
                                 if (this.item_obj.description.length && (t = t.replace(this.item_obj.description, '<span style="color: #007777;">' + this.item_obj.description + "</span>")), this.item_obj instanceof west.item.Weapon && TWIR.Features.get("pop_avg_dmg"))
                                 {
@@ -5656,39 +5656,38 @@
                             }
                         }), TWIR.Util.addCss(".twir_set_collector_pin { height: 25px; width: 25px; display: inline-block; cursor: pointer;position: relative;background: #e9d3a7;border-radius: 10px; margin-top: 2px;margin-bottom: 2px; }.twir_set_collector_pin:hover {opacity: 0.75;}.twir_set_collector_set { height: 50px;width: 50px; display: inline-block; margin: 5px; margin-top: 7px; margin-bottom: 7px;cursor: pointer;position: relative;background: #e9d3a7;border-radius: 10px; }.twir_set_collector_element:hover { background: linear-gradient(90deg, rgba(16, 149, 106, 0) 0%, rgba(166, 128, 90, 0.32) 15%, rgba(166, 128, 90, 0.32) 30%, rgba(243, 245, 245, 0.02) 100%)!important; }")
                     },
-                    getSets: function(e, t)
-                    {
-                        this.data_all_sets || this.updateSets();
-                        var i = {},
-                            a = ["clothes", "weapons", "ride"];
-                        for (var r in this.data_all_sets)
-                        {
-                            i[r] = [];
-                            for (var n = 0, o = this.data_all_sets[r].length; n < o; n++)
-                            {
-                                var A = this.data_all_sets[r][n];
-                                if (!t || A.own_items.length)
-                                    if ("fullslot" === e && A.group)
-                                        if (Array.isArray(A.group))
-                                            for (var s = 0; s < A.group.length; s++)
-                                            {
-                                                var l = "_merged_" + A.event + "_" + A.year + "_" + A.group[s];
-                                                i[l] || (i[l] = []), i[l].push(A)
-                                            }
-                                else
-                                {
-                                    var l = "_merged_" + A.event + "_" + A.year + "_" + A.group;
-                                    i[l] || (i[l] = []), i[l].push(A)
+                    getSets: function (e, t) {
+                      this.data_all_sets || this.updateSets();
+                      var i = {},
+                      a = ["clothes", "weapons", "ride"];
+                      for (var r in this.data_all_sets) {
+                        i[r] = [];
+                        for (var n = 0, o = this.data_all_sets[r].length; n < o; n++) {
+                          var A = this.data_all_sets[r][n];
+                          console.log(A, e)
+                          if (!t || A.own_items.length)
+                            if ("fullslot" === e && A.group) {
+                              if (Array.isArray(A.group))
+                                for (var s = 0; s < A.group.length; s++) {
+                                  var l = "_merged_" + A.event + "_" + A.year + "_" + A.group[s];
+                                  i[l] || (i[l] = []),
+                                  i[l].push(A)
                                 }
-                                else(!e || e && A.type === e) && i[r].push(A)
-                            }
-                            i[r].length || delete i[r]
+                              else {
+                                var l = "_merged_" + A.event + "_" + A.year + "_" + A.group;
+                                i[l] || (i[l] = []),
+                                i[l].push(A)
+                              }
+                            } else
+                              (!e || e === "fullslot" || e && A.type === e) && i[r].push(A)
                         }
-                        for (var g in i) i[g].sort(function(e, t)
-                        {
-                            return a.indexOf(e.type) - a.indexOf(t.type)
+                        i[r].length || delete i[r]
+                      }
+                      for (var g in i)
+                        i[g].sort(function (e, t) {
+                          return a.indexOf(e.type) - a.indexOf(t.type)
                         });
-                        return i
+                      return i
                     },
                     updateSets: function()
                     {
@@ -7125,7 +7124,7 @@
                                                     break;
                                                 default:
                                                     parseInt(e) == A.item_id && 4 !== e.length || r(A.name) || null !== A.set && r(west.storage.ItemSetManager.get(A.set)
-                                                        .name) || Bag.searchAttrib(A.bonus, a) || Bag.searchUseBonus(A, a) || e == A.level || void 0 !== A.profession && r(A.profession) ? i.push(t) : (s && s[1] === e || s && s[0].toLowerCase() + " " + s[1] === e.toLowerCase()) && i.push(t)
+                                                        .name) || Bag.searchAttrib(A.bonus, a) || Bag.searchUseBonus(A, a) || e == A.level || void 0 !== A.profession && r(A.profession) ? i.push(t) : (s && s[1] === e || s && s[0] && s[0].toLowerCase() + " " + s[1] === e.toLowerCase()) && i.push(t)
                                             }
                                         })
                                     }
