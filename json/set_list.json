@@ -1928,6 +1928,9 @@
 "easter_2025_set_12": ["easter", "2025", "4"],
 "easter_2025_set_11": ["sale", "2025"],
 "easter_2025_set_13": ["easter", "2025"],
+"birthday_2025_clothes": [null, "2025", "1"],
+"birthday_2025_animal": [null, "2025", "1"],
+"birthday_2025_weapon": [null, "2025", "1"],
 "independence_day_2025_set_1": ["independence", "2025", "1"],
 "independence_day_2025_set_2": ["independence", "2025", "1"],
 "independence_day_2025_set_3": ["independence", "2025", "1"],
@@ -1964,4 +1967,5 @@
 "dod_2025_set_8": ["dotd", "2025", "3"],
 "dod_2025_set_9": ["dotd", "2025", "3"]
 }
+
 
