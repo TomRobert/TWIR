@@ -698,6 +698,8 @@
         "2017",
         "3"
     ],
+    "set_veteran_2017_1": [null, "2017", "1"],
+    "set_veteran_animal_cook": [null, "2017", "1"],
     "set_independence_2017_1": [
         "independence",
         "2017",
@@ -818,6 +820,9 @@
         "2017",
         "3"
     ],
+    "set_fair_2017_clothes": [null, "2017", "2"],
+    "set_fair_2017_animal": [null, "2017", "2"],
+    "set_fair_2017_weapons": [null, "2017", "2"],
     "set_xmas17_male": [
         "xmas",
         "2017"
@@ -879,6 +884,9 @@
         "2017",
         "2"
     ],
+    "2017_ifbc_clothes": [null, "2017", "3"],
+    "2017_ifbc_animal": [null, "2017", "3"],
+    "2017_ifbc_weapons": [null, "2017", "3"],
     "2018_valentines_set_1": [
         "valentine",
         "2018",
@@ -893,6 +901,8 @@
         "valentine",
         "2018"
     ],
+    "set_carnival_2018_1": [null, "2018", "1"],
+    "set_carnival_2018_2": [null, "2018", "1"],
     "2018_easter_set_1": [
         "easter",
         "2018",
@@ -931,6 +941,9 @@
         "easter",
         "2018"
     ],
+    "2018_10th_set_1": [null, "2018", "2"],
+    "2018_10th_set_2": [null, "2018", "2"],
+    "2018_10th_set_3": [null, "2018", "2"],
     "independance_event_set1": [
         "independence",
         "2018",
@@ -1239,6 +1252,9 @@
         "independence",
         "2019"
     ],
+    "gold_rush_clothes": [null, "2019", "1"],
+    "gold_rush_weapons": [null, "2019", "1"],
+    "gold_rush_animal": [null, "2019", "1"],
     "okt_setwof_2019_1": [
         "oktoberfest",
         "2019",
@@ -1388,6 +1404,8 @@
         "valentine",
         "2020"
     ],
+    "community_event_2020_march": [null, "2020", "1"],
+    "community_event_2020_march_2": [null, "2020", "1"],
     "easter_2020_set_1": [
         "easter",
         "2020",
@@ -1426,6 +1444,9 @@
         "easter",
         "2020"
     ],
+    "ifbc2020_set-1": [null, "2020", "2"],
+    "ifbc2020_set_2": [null, "2020", "2"],
+    "ifbc2020_set_3": [null, "2020", "2"],
     "independence_day_2020_set_1": [
         "independence",
         "2020",
@@ -1640,6 +1661,20 @@
         "2021",
         "2"
     ],
+    "fan_collector_set": [null, "2021", "1"],
+    "west_fun_animal_set": [null, "2021", "1"],
+    "set_free_to_use_dummy": [null, "2021", "2"],
+    "legendary_set_1": [null, "2021", "2"],
+    "legendary_set_2": [null, "2021", "2"],
+    "eire_set_1": [null, "2021", "3"],
+    "eire_set_2": [null, "2021", "3"],
+    "eire_set_3": [null, "2021", "3"],
+    "easter_chick_set_1": [null, "2021", "4"],
+    "easter_chick_set_2": [null, "2021", "4"],
+    "easter_sheep_set_1": [null, "2021", "5"],
+    "easter_sheep_set_2": [null, "2021", "5"],
+    "easter_hare_set_1": [null, "2021", "6"],
+    "easter_hare_set_2": [null, "2021", "6"],
     "easter_2021_set1": [
         "easter",
         "2021",
@@ -1809,6 +1844,9 @@
     "easter_2023_set12": ["easter", "2023", "4"],
     "easter_2023_set11": ["sale", "2023"],
     "easter_2023_set13": ["easter", "2023"],
+    "15_b_day_set": [null, "2023", "1"],
+    "15_b_day_set_animal": [null, "2023", "1"],
+    "15_b_day_set_weapon": [null, "2023", "1"],
     "sale_june_2023_clothes": ["sale", "2023", "1"],
     "sale_june_2023_animal": ["sale", "2023", "1"],
     "sale_june_2023_weapon": ["sale", "2023", "1"],
@@ -1867,6 +1905,9 @@
     "easter_2024_set12": ["easter", "2024", "4"],
     "easter_2024_set11": ["sale", "2024"],
     "easter_2024_set13": ["easter", "2024"],
+    "16_b_day_set": [null, "2024", "1"],
+    "16_b_day_set_animal": [null, "2024", "1"],
+    "16_b_day_set_weapon": [null, "2024", "1"],
     "soccer_2024_clothes": ["sale", "2024", "1"],
     "soccer_2024_animal": ["sale", "2024", "1"],
     "soccer_2024_weapon": ["sale", "2024", "1"],
@@ -1883,6 +1924,9 @@
     "independence_day_2024_set_11": ["independence", "2024", "4"],
     "independence_day_2024_set_12": ["sale", "2024"],
     "independence_day_2024_set_13": ["independence", "2024"],
+    "ifbc_4_clothing_set": [null, "2024", "2"],
+    "ifbc_4_animal_set": [null, "2024", "2"],
+    "ifbc_4_weapon_set": [null, "2024", "2"],
     "oktoberfest_2024_set_1": ["oktoberfest", "2024", "1"],
     "oktoberfest_2024_set_2": ["oktoberfest", "2024", "1"],
     "oktoberfest_2024_set_3": ["oktoberfest", "2024", "1"],
@@ -1965,7 +2009,8 @@
 "dod_2025_set_6": ["dotd", "2025", "2"],
 "dod_2025_set_7": ["dotd", "2025", "3"],
 "dod_2025_set_8": ["dotd", "2025", "3"],
-"dod_2025_set_9": ["dotd", "2025", "3"]
+"dod_2025_set_9": ["dotd", "2025", "3"],
+"holiday_2025_set_1": ["xmas", "2025", "1"],
+"holiday_2025_set_2": ["xmas", "2025", "1"],
+"holiday_2025_set_3": ["xmas", "2025", "1"]
 }
-
-
