@@ -825,27 +825,33 @@
     "set_fair_2017_weapons": [null, "2017", "2"],
     "set_xmas17_male": [
         "xmas",
-        "2017"
+        "2017",
+        "1"
     ],
     "set_xmas17_male_animal": [
         "xmas",
-        "2017"
+        "2017",
+        "1"
     ],
     "set_xmas17_male_weapons": [
         "xmas",
-        "2017"
+        "2017",
+        "1"
     ],
     "set_xmas17_female": [
         "xmas",
-        "2017"
+        "2017",
+        "2"
     ],
     "set_xmas17_female_animal": [
         "xmas",
-        "2017"
+        "2017",
+        "2"
     ],
     "set_xmas17_female_weapons": [
         "xmas",
-        "2017"
+        "2017",
+        "2"
     ],
     "set_wright_brothers_clothes": [
         "sale",
@@ -1116,10 +1122,6 @@
         "2018",
         "2"
     ],
-    "black_friday_set": [
-        "sale",
-        "2018"
-    ],
     "valentine_2019_set_1": [
         "valentine",
         "2019"
@@ -1374,6 +1376,11 @@
     "sale_jfry_set_2019": [
         "sale",
         "2019"
+    ],
+    "black_friday_set": [
+        "sale",
+        "2019",
+        "2"
     ],
     "western_friday_weapon_set": [
         "sale",
@@ -2014,3 +2021,4 @@
 "holiday_2025_set_2": ["xmas", "2025", "1"],
 "holiday_2025_set_3": ["xmas", "2025", "1"]
 }
+
